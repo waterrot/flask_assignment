@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Choose animals</title>
+	</head>
+	<body>
+		This is the template for the main page.
+		<br>
+		<form action="{{ url_for('show_results') }}" method="post">
+			{% for animal in animals %}
+				<input type="checkbox" id="{{ animal }}" name="{{ animal }}" value="{{ animal }}">
+				<label for="{{ animal }}"> {{ animal }}</label><br>
+			{% endfor %}
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

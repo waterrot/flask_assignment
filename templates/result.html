@@ -1,0 +1,11 @@
+<html>
+	<head>
+		<title>See animals</title>
+	</head>
+	<body>
+		{% for value_animal in value_animals %}
+			<h2>This is {% if value_animal == "armadillo" or value_animal == "eel" %}an {% else %}a {% endif %}{{ value_animal }}:</h2>
+			<img src="/static/{{ value_animal }}.jpg" alt="Take a look it is {% if value_animal == 'armadillo' or value_animal == 'eel' %}an {% else %}a {% endif %}{{ value_animal }}!" width="300">
+		{% endfor %}
+	</body>
+</html>
